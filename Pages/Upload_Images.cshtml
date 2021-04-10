@@ -1,0 +1,15 @@
+﻿@page
+@model Donations_Online_Directory.Pages.Upload_ImagesModel
+@{
+    ViewData["Title"] = "UploadTest";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>UploadTest</h1>
+<form method="post" enctype="multipart/form-data">
+    Product Name:<input id="Text1" type="text" asp-for="product.Name" /><br />
+    choose file:<input id="File1" type="file" asp-for="image.file" /><br />
+    file description:<input id="Text1" type="text" asp-for="image.description" /><br />
+    <input id="Submit1" type="submit" value="submit" />
+</form>
+
