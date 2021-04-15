@@ -1,0 +1,34 @@
+﻿@page
+@model Donations_Online_Directory.Pages.UploadMultipleFilesModel
+@{
+    ViewData["Title"] = "Upload Multiple Images";
+}
+
+<h2>Upload multiple images</h2>
+
+<form enctype="multipart/form-data" method="post">
+    <dl>
+        <dt>
+            <label asp-for="FileUpload.Note"></label>
+        </dt>
+        <dd>
+            <input asp-for="FileUpload.Note" type="text" />
+            <span asp-validation-for="FileUpload.Note"></span>
+        </dd>
+        <dt>
+            <label asp-for="FileUpload.FormFiles"></label>
+        </dt>
+        <dd>
+            <input asp-for="FileUpload.FormFiles" type="file" multiple />
+            <span asp-validation-for="FileUpload.FormFiles"></span>
+        </dd>
+    </dl>
+    <input asp-page-handler="Upload" class="btn" type="submit" value="Upload" />
+</form>
+
+<p class="result">
+    @Model.Result
+</p>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}}

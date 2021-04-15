@@ -17,5 +17,7 @@ namespace Donations_Online_Directory.Data
         public DbSet<Donations_Online_Directory.Models.Product> Product { get; set; }
 
         public DbSet<Donations_Online_Directory.Models.Category> Category { get; set; }
+
+        public DbSet<Donations_Online_Directory.Models.Image> Image { get; set; }
     }
 }

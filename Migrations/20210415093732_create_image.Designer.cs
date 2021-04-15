@@ -4,14 +4,16 @@ using Donations_Online_Directory.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Donations_Online_Directory.Migrations
 {
     [DbContext(typeof(Donations_Online_DirectoryContext))]
-    partial class Donations_Online_DirectoryContextModelSnapshot : ModelSnapshot
+    [Migration("20210415093732_create_image")]
+    partial class create_image
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

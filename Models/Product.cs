@@ -25,5 +25,7 @@ namespace Donations_Online_Directory.Models
 
     [BindProperty]
     public Category Category { get; set; }
+
+       // public ICollection<Image> Image { get; set; }
     }
 }
